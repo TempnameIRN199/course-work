@@ -9,7 +9,6 @@
 //#include <ctype.h>
 //#include "fstream"
 //using namespace std;
-//// функция для создания матрицы
 //void SecondCreate(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
@@ -20,7 +19,6 @@
 //		}
 //	}
 //}
-//// функция для вывода матрицы
 //void SecondPrint(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
@@ -32,7 +30,6 @@
 //		cout << endl;
 //	}
 //}
-//// функция для сортировки матрицы
 //void SecondSort(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
