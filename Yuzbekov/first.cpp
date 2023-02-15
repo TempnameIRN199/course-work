@@ -25,7 +25,6 @@
 //		}
 //	}
 //}
-//// функция для создания массива
 //void FirstCreate(int* arr, int n)
 //{
 //	for (int i = 0; i < n; i++)
@@ -33,7 +32,6 @@
 //		arr[i] = rand() % 100;
 //	}
 //}
-//// функция для вывода массива
 //void FirstPrint(int* arr, int n)
 //{
 //	for (int i = 0; i < n; i++)
@@ -43,7 +41,6 @@
 //	cout << endl;
 //}
 //
-//// функция для проверки отсортирован ли массив
 //bool FirstCheck(int* arr, int n)
 //{
 //	for (int i = 0; i < n - 1; i++)
