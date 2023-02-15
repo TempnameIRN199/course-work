@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="first.cpp" />
     <ClCompile Include="second.cpp" />
+    <ClCompile Include="third.cpp" />
     <ClCompile Include="Yuzbekov.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
