@@ -10,7 +10,7 @@
 //#include "fstream"
 //using namespace std;
 //// функция для создания матрицы
-//void create(int** arr, int n, int m)
+//void SecondCreate(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
@@ -21,7 +21,7 @@
 //	}
 //}
 //// функция для вывода матрицы
-//void print(int** arr, int n, int m)
+//void SecondPrint(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
@@ -33,7 +33,7 @@
 //	}
 //}
 //// функция для сортировки матрицы
-//void sort(int** arr, int n, int m)
+//void SecondSort(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
 //	{

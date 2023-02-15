@@ -10,13 +10,9 @@
 #include <fstream>
 using namespace std;
 
-// Создание базы данных
-
-// Структура:
-// Прайс-лист WIFI-адаптеров в магазине: фирма -производитель, модель, скорость WIFI в Мбит /с, цена, дата поставки
-// Параметры сортировки:
-// за падением скорости
-// Выбор данных по условию
+int FirsTask();
+int SecondTask();
+int ThirdTask();
 
 struct wifi
 {
@@ -26,8 +22,93 @@ struct wifi
 	int price;
 	char date[20];
 }ved[4];
-// Функции
-void create(wifi* ved, int n)
+
+void FirstSort(int* arr, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+}
+// функция для создания массива
+void FirstCreate(int* arr, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 100;
+	}
+}
+// функция для вывода массива
+void FirstPrint(int* arr, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+}
+
+// функция для проверки отсортирован ли массив
+bool FirstCheck(int* arr, int n)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (arr[i] > arr[i + 1])
+		{
+			return false;
+		}
+	}
+	return true;
+}
+// функция для создания матрицы
+void SecondCreate(int** arr, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
+	}
+}
+// функция для вывода матрицы
+void SecondPrint(int** arr, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+// функция для сортировки матрицы
+void SecondSort(int** arr, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			if (arr[j][0] < arr[j + 1][0])
+			{
+				int* temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+}
+
+void ThirdCreate(wifi* ved, int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -44,7 +125,7 @@ void create(wifi* ved, int n)
 	}
 }
 // Вывод базы данных
-void print(wifi* ved, int n)
+void ThirdPrint(wifi* ved, int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -56,7 +137,7 @@ void print(wifi* ved, int n)
 	}
 }
 // Сортировка по скорости
-void sort(wifi* ved, int n)
+void ThirdSort(wifi* ved, int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -72,7 +153,7 @@ void sort(wifi* ved, int n)
 	}
 }
 // Поиск по скорости
-void search(wifi* ved, int n)
+void ThirdSearch(wifi* ved, int n)
 {
 	int speed;
 	cout << "Введите скорость: ";
@@ -90,7 +171,7 @@ void search(wifi* ved, int n)
 	}
 }
 // Сохранение в файл
-void save(wifi* ved, int n)
+void ThirdSave(wifi* ved, int n)
 {
 	ofstream fout("wifi.txt");
 	for (int i = 0; i < n; i++)
@@ -104,18 +185,3 @@ void save(wifi* ved, int n)
 	fout.close();
 }
 
-int main()
-{
-	setlocale(LC_ALL, "rus");
-	int n;
-	cout << "Введите количество элементов: ";
-	cin >> n;
-	create(ved, n);
-	print(ved, n);
-	sort(ved, n);
-	cout << "Отсортированный список: " << endl;
-	print(ved, n);
-	search(ved, n);
-	save(ved, n);
-	return 0;
-}

@@ -10,7 +10,7 @@
 //#include "fstream"
 //using namespace std;
 //
-//void sort(int* arr, int n)
+//void FirstSort(int* arr, int n)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
@@ -26,7 +26,7 @@
 //	}
 //}
 //// функция для создания массива
-//void create(int* arr, int n)
+//void FirstCreate(int* arr, int n)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
@@ -34,7 +34,7 @@
 //	}
 //}
 //// функция для вывода массива
-//void print(int* arr, int n)
+//void FirstPrint(int* arr, int n)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
@@ -44,7 +44,7 @@
 //}
 //
 //// функция для проверки отсортирован ли массив
-//bool check(int* arr, int n)
+//bool FirstCheck(int* arr, int n)
 //{
 //	for (int i = 0; i < n - 1; i++)
 //	{
