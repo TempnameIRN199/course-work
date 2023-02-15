@@ -38,7 +38,6 @@ void FirstSort(int* arr, int n)
 		}
 	}
 }
-// функция для создания массива
 void FirstCreate(int* arr, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -46,7 +45,6 @@ void FirstCreate(int* arr, int n)
 		arr[i] = rand() % 100;
 	}
 }
-// функция для вывода массива
 void FirstPrint(int* arr, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -55,8 +53,6 @@ void FirstPrint(int* arr, int n)
 	}
 	cout << endl;
 }
-
-// функция для проверки отсортирован ли массив
 bool FirstCheck(int* arr, int n)
 {
 	for (int i = 0; i < n - 1; i++)
@@ -68,7 +64,6 @@ bool FirstCheck(int* arr, int n)
 	}
 	return true;
 }
-// функция для создания матрицы
 void SecondCreate(int** arr, int n, int m)
 {
 	for (int i = 0; i < n; i++)
@@ -79,7 +74,6 @@ void SecondCreate(int** arr, int n, int m)
 		}
 	}
 }
-// функция для вывода матрицы
 void SecondPrint(int** arr, int n, int m)
 {
 	for (int i = 0; i < n; i++)
@@ -91,7 +85,6 @@ void SecondPrint(int** arr, int n, int m)
 		cout << endl;
 	}
 }
-// функция для сортировки матрицы
 void SecondSort(int** arr, int n, int m)
 {
 	for (int i = 0; i < n; i++)
@@ -124,7 +117,6 @@ void ThirdCreate(wifi* ved, int n)
 		cin >> ved[i].date;
 	}
 }
-// Вывод базы данных
 void ThirdPrint(wifi* ved, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -136,7 +128,6 @@ void ThirdPrint(wifi* ved, int n)
 		cout << "Дата: " << ved[i].date << endl;
 	}
 }
-// Сортировка по скорости
 void ThirdSort(wifi* ved, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -152,7 +143,6 @@ void ThirdSort(wifi* ved, int n)
 		}
 	}
 }
-// Поиск по скорости
 void ThirdSearch(wifi* ved, int n)
 {
 	int speed;
@@ -170,7 +160,6 @@ void ThirdSearch(wifi* ved, int n)
 		}
 	}
 }
-// Сохранение в файл
 void ThirdSave(wifi* ved, int n)
 {
 	ofstream fout("wifi.txt");
