@@ -9,6 +9,15 @@
 //#include <ctype.h>
 //#include <fstream>
 //using namespace std;
+//
+//// Создание базы данных
+//
+//// Структура:
+//// Прайс-лист WIFI-адаптеров в магазине: фирма -производитель, модель, скорость WIFI в Мбит /с, цена, дата поставки
+//// Параметры сортировки:
+//// за падением скорости
+//// Выбор данных по условию
+//
 //struct wifi
 //{
 //	char firm[20];
@@ -17,33 +26,36 @@
 //	int price;
 //	char date[20];
 //}ved[4];
+//// Функции
 //void ThirdCreate(wifi* ved, int n)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
-//		cout << "Ââåäèòå ôèðìó: ";
+//		cout << "Введите фирму: ";
 //		cin >> ved[i].firm;
-//		cout << "Ââåäèòå ìîäåëü: ";
+//		cout << "Введите модель: ";
 //		cin >> ved[i].model;
-//		cout << "Ââåäèòå ñêîðîñòü: ";
+//		cout << "Введите скорость: ";
 //		cin >> ved[i].speed;
-//		cout << "Ââåäèòå öåíó: ";
+//		cout << "Введите цену: ";
 //		cin >> ved[i].price;
-//		cout << "Ââåäèòå äàòó: ";
+//		cout << "Введите дату: ";
 //		cin >> ved[i].date;
 //	}
 //}
+//// Вывод базы данных
 //void ThirdPrint(wifi* ved, int n)
 //{
 //	for (int i = 0; i < n; i++)
 //	{
-//		cout << "Ôèðìà: " << ved[i].firm << endl;
-//		cout << "Ìîäåëü: " << ved[i].model << endl;
-//		cout << "Ñêîðîñòü: " << ved[i].speed << endl;
-//		cout << "Öåíà: " << ved[i].price << endl;
-//		cout << "Äàòà: " << ved[i].date << endl;
+//		cout << "Фирма: " << ved[i].firm << endl;
+//		cout << "Модель: " << ved[i].model << endl;
+//		cout << "Скорость: " << ved[i].speed << endl;
+//		cout << "Цена: " << ved[i].price << endl;
+//		cout << "Дата: " << ved[i].date << endl;
 //	}
 //}
+//// Сортировка по скорости
 //void ThirdSort(wifi* ved, int n)
 //{
 //	for (int i = 0; i < n; i++)
@@ -59,49 +71,50 @@
 //		}
 //	}
 //}
+//// Поиск по скорости
 //void ThirdSearch(wifi* ved, int n)
 //{
 //	int speed;
-//	cout << "Ââåäèòå ñêîðîñòü: ";
+//	cout << "Введите скорость: ";
 //	cin >> speed;
 //	for (int i = 0; i < n; i++)
 //	{
 //		if (ved[i].speed == speed)
 //		{
-//			cout << "Ôèðìà: " << ved[i].firm << endl;
-//			cout << "Ìîäåëü: " << ved[i].model << endl;
-//			cout << "Ñêîðîñòü: " << ved[i].speed << endl;
-//			cout << "Öåíà: " << ved[i].price << endl;
-//			cout << "Äàòà: " << ved[i].date << endl;
+//			cout << "Фирма: " << ved[i].firm << endl;
+//			cout << "Модель: " << ved[i].model << endl;
+//			cout << "Скорость: " << ved[i].speed << endl;
+//			cout << "Цена: " << ved[i].price << endl;
+//			cout << "Дата: " << ved[i].date << endl;
 //		}
 //	}
 //}
+//// Сохранение в файл
 //void ThirdSave(wifi* ved, int n)
 //{
 //	ofstream fout("wifi.txt");
 //	for (int i = 0; i < n; i++)
 //	{
-//		fout << "Ôèðìà: " << ved[i].firm << endl;
-//		fout << "Ìîäåëü: " << ved[i].model << endl;
-//		fout << "Ñêîðîñòü: " << ved[i].speed << endl;
-//		fout << "Öåíà: " << ved[i].price << endl;
-//		fout << "Äàòà: " << ved[i].date << endl;
+//		fout << "Фирма: " << ved[i].firm << endl;
+//		fout << "Модель: " << ved[i].model << endl;
+//		fout << "Скорость: " << ved[i].speed << endl;
+//		fout << "Цена: " << ved[i].price << endl;
+//		fout << "Дата: " << ved[i].date << endl;
 //	}
 //	fout.close();
 //}
 //
 //int main()
 //{
-//	setlocale(LC_ALL, "rus");
-//	int n;
-//	cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ: ";
-//	cin >> n;
-//	create(ved, n);
-//	print(ved, n);
-//	sort(ved, n);
-//	cout << "Îòñîðòèðîâàííûé ñïèñîê: " << endl;
-//	print(ved, n);
-//	search(ved, n);
-//	save(ved, n);
-//	return 0;
+//setlocale(LC_ALL, "rus");
+//int n;
+//cout << "Введите количество элементов: ";
+//cin >> n;
+//ThirdCreate(ved, n);
+//ThirdPrint(ved, n);
+//ThirdSort(ved, n);
+//cout << "Отсортированный список: " << endl;
+//ThirdPrint(ved, n);
+//ThirdSearch(ved, n);
+//ThirdSave(ved, n);
 //}
