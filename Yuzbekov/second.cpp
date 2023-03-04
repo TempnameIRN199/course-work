@@ -9,6 +9,7 @@
 //#include <ctype.h>
 //#include "fstream"
 //using namespace std;
+//// функция для создания матрицы
 //void SecondCreate(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
@@ -19,6 +20,7 @@
 //		}
 //	}
 //}
+//// функция для вывода матрицы
 //void SecondPrint(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
@@ -30,6 +32,7 @@
 //		cout << endl;
 //	}
 //}
+//// функция для сортировки матрицы
 //void SecondSort(int** arr, int n, int m)
 //{
 //	for (int i = 0; i < n; i++)
@@ -47,26 +50,25 @@
 //}
 //int main()
 //{
-//	srand(time(NULL));
-//	int n, m;
-//	cout << "Enter n: ";
-//	cin >> n;
-//	cout << "Enter m: ";
-//	cin >> m;
-//	int** arr = new int* [n];
-//	for (int i = 0; i < n; i++)
-//	{
-//		arr[i] = new int[m];
-//	}
-//	create(arr, n, m);
-//	print(arr, n, m);
-//	sort(arr, n, m);
-//	cout << endl;
-//	print(arr, n, m);
-//	for (int i = 0; i < n; i++)
-//	{
-//		delete[] arr[i];
-//	}
-//	delete[] arr;
-//	return 0;
+//srand(time(NULL));
+//int n, m;
+//cout << "Enter n: ";
+//cin >> n;
+//cout << "Enter m: ";
+//cin >> m;
+//int** arr = new int* [n];
+//for (int i = 0; i < n; i++)
+//{
+//	arr[i] = new int[m];
+//}
+//SecondCreate(arr, n, m);
+//SecondPrint(arr, n, m);
+//SecondSort(arr, n, m);
+//cout << endl;
+//SecondPrint(arr, n, m);
+//for (int i = 0; i < n; i++)
+//{
+//	delete[] arr[i];
+//}
+//delete[] arr;
 //}
